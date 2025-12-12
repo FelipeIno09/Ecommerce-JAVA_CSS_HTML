@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cadastro</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<style>
+    /* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== FUNDO ===== */
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 70px;
+}
+
+/* ===== CARD DE CADASTRO ===== */
+.container-login {
+    width: 330px;
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    animation: fadeIn 0.3s ease;
+}
+
+/* animação suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== TÍTULO ===== */
+.container-login h1 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #222;
+}
+
+/* ===== INPUTS ===== */
+.container-login input,
+.container-login select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+.container-login input:focus,
+.container-login select:focus {
+    border-color: #4a90e2;
+}
+
+/* ===== LABEL ===== */
+.container-login label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #444;
+}
+
+/* ===== BOTÃO ===== */
+.container-login button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.container-login button:hover {
+    background-color: #3578c5;
+}
+
+/* ===== LINK VOLTAR ===== */
+.container-login a {
+    display: block;
+    margin-top: 18px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: #4a90e2;
+}
+
+.container-login a:hover {
+    text-decoration: underline;
+}
+
+</style>
+<div class="container-login">
+    <h1>Nova Conta</h1>
+
+    <!-- action/campos ajustados para bater com Usuario model -->
+    <form action="/cadastrar" method="post">
+        <input type="text" name="nome" placeholder="Nome Completo" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+
+        <label>Eu sou:</label>
+        <select name="funcao">
+            <option value="CLIENTE">Cliente</option>
+            <option value="ADMIN">Vendedor</option>
+        </select>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <a href="/">Voltar</a>
+</div>
+</body>
+</html>

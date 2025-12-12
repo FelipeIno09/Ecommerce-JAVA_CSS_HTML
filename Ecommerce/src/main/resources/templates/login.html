@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+}
+
+.container-login {
+    width: 320px;
+    margin: 80px auto;
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.container-login h1 {
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.container-login input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.container-login button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.container-login a {
+    display: block;
+    margin-top: 15px;
+    color: #4a90e2;
+}
+
+.alerta-erro {
+    background-color: #ffdddd;
+    color: #b30000;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.alerta-sucesso {
+    background-color: #ddffdd;
+    color: #0d7a0d;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+</style>
+<body>
+<div class="container-login">
+    <h1>Login</h1>
+
+    <div class="alerta-erro" th:if="${erro}" th:text="${erro}"></div>
+    <div class="alerta-sucesso" th:if="${mensagem}" th:text="${mensagem}"></div>
+
+    <form action="/entrar" method="post">
+        <input type="email" name="email" placeholder="E-mail" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+    </form>
+
+    <a href="/cadastro">Criar conta</a>
+</div>
+</body>
+</html>

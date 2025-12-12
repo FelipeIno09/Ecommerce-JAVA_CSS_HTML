@@ -1,0 +1,239 @@
+/* ============================================
+   RESET GLOBAL + PADRÃO DE FONTE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+}
+
+
+/* ============================================
+   COMPONENTES GERAIS
+   ============================================ */
+
+h1, h2, h3 {
+    color: #222;
+}
+
+/* Botão padrão */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background .25s ease;
+}
+
+.btn:hover {
+    background-color: #3578c5;
+}
+
+/* Links padrão */
+.link {
+    color: #4a90e2;
+    text-decoration: none;
+    margin-top: 12px;
+    display: inline-block;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Alertas */
+.alerta-erro {
+    background-color: #ffdddd;
+    color: #b30000;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.alerta-sucesso {
+    background-color: #ddffdd;
+    color: #0d7a0d;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+
+/* ============================================
+   FORMULÁRIOS GERAIS
+   (login, cadastro, produto)
+   ============================================ */
+
+.form-container {
+    width: 350px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    transition: transform .2s, box-shadow .2s;
+}
+
+.form-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.18);
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 18px 0;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border .2s;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+    border-color: #4a90e2;
+}
+
+
+
+/* ============================================
+   TOPO (painel admin & vitrine)
+   ============================================ */
+.topo {
+    background: linear-gradient(90deg, #1a1a1a, #333);
+    color: #fff;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+}
+
+.topo a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.topo a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* ============================================
+   PAINEL ADMIN
+   ============================================ */
+
+.container-admin {
+    width: 95%;
+    margin: 25px auto;
+}
+
+.btn-novo {
+    background-color: #198754;
+    padding: 10px 18px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.btn-novo:hover {
+    background-color: #146c43;
+}
+
+/* Tabela */
+.tabela-produtos {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 18px rgba(0,0,0,0.1);
+}
+
+.tabela-produtos th,
+.tabela-produtos td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabela-produtos th {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.tabela-produtos tr:hover {
+    background: #f1f1f1;
+}
+
+
+
+/* ============================================
+   VITRINE / LOJA
+   ============================================ */
+
+.info-cotacao {
+    background: #fff;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 18px;
+    font-size: 1rem;
+    border-radius: 8px;
+    color: #444;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+.grid-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 25px;
+}
+
+.card {
+    background-color: #fff;
+    width: 230px;
+    border-radius: 12px;
+    padding-bottom: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+    transition: transform .2s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 12px 0 8px 0;
+}
+
+.preco-real {
+    margin-top: 8px;
+    font-size: 1.3rem;
+    color: #1ea54c;
+    font-weight: bold;
+}
